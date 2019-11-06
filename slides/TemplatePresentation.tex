@@ -43,8 +43,12 @@
 
 \begin{itemize}
   \IteOne{Introdução}
-  \IteOne{Módulos}
-  \IteOne{Exemplos}
+  \IteOne{Conceitos}
+  \IteOne{Processo de análise}
+  \IteOne{Frequencia, tabela gráficos, histograma}
+  \IteOne{Medidas de tendëncia}
+  \IteOne{Medidas de variäncia}
+  \IteOne{Correlação}
 \end{itemize}
 
 }
@@ -190,7 +194,7 @@ Epíciclos de ciência dos dados \footnote{"The Art of Data Science A Guide for 
 
 \SliT{Introdução a Estatística}{
 
-Etapas dp epicíclo:
+Etapas do epicíclo:
 
 \begin{itemize}
 \IteOne{ Definir a questão}
@@ -305,6 +309,7 @@ Sumarização de variável qualitativa:
 \includegraphics[scale=0.55]{1111.png}     
 \end{center}
 }
+
 \SliT{Introdução a Estatística}{
 
 Tabela de variáveis quantitativas - Nível de consumo de alcool.
@@ -347,7 +352,7 @@ Amplitude das classes
 
 \[ a = (maiorValor-menorValor/numeroDeClasses) \]
 
-no pandas a quantidade de classes é definida por série usando o parâmetro bins do método value_counts()
+no pandas a quantidade de classes é definida por série usando o parâmetro bins do método value\_counts()
 
 
 }
@@ -431,24 +436,52 @@ dos dados}
 \end{itemize}
 }
 
-% \SliT{Introdução a Estatística}{
+\SliT{Introdução a Estatística}{
 
-% Análise Bivariada
+Análise MultiVariada
 
-% \begin{itemize}
-% \IteOne{ Investigar relação entre variáveis categóricas}
-% \IteOne{ Podemos construir tabelas de freqüência com dupla entrada. Essas tabelas de dados cruzados são conhecidas por tabelas de contingência  }
-% \end{itemize}
+\begin{itemize}
+\IteOne{ Investigar relação entre variáveis}
+\IteOne{ Variáveis qualitativas}
+\IteTwo{ tabelas de freqüência com dupla entrada. Essas tabelas de dados cruzados são conhecidas por tabelas de contingência  }
+\IteOne{ Variáveis quantitativas}
+\IteTwo{ Gráficos de Dispersão  }
+\end{itemize}
 
-% }
+}
 
-% \SliT{Introdução a Estatística}{
+\SliT{Introdução a Estatística}{
 
-% Box-Plot - deixar para mostrar depois!!
-% Representação gráfica de cinco medidas: mínimo,
-% quartil inferior, mediana, quartil superior, máximo
-% }
+\begin{center}
+\begin{tabular}{ c c c c c}
+Origem/grau de intrução & fundamental & médio & superior & total \\
+Capital & 11 \% & 14 \% & 6 \% & 31 \% \\
+Interior & 8 \% & 19 \% & 6 \% & 33 \% \\
+Outra & 14 \% & 17 \% & 6 \% & 36 \% \\
+Slovakia & 33 \% & 50 \% & 17 \% & 100 \% 
+\end{tabular}
+\end{center}
 
+}
+
+ \SliT{Introdução a Estatística}{
+\begin{center}
+\includegraphics[scale=0.70]{3434.png}     
+\end{center}
+}
+
+\SliT{Introdução a Estatística}{
+
+Métodos para medir correlação entre variáveis disponíveis no Pandas
+
+\begin{itemize}
+\IteOne{ pearson}
+\IteOne{ kendall   }
+\IteOne{ spearman   }
+\end{itemize}
+
+
+}
 % \SliT{Introdução a Estatística}{
 
 % Exemplo de tabela de frequências
