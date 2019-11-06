@@ -1,0 +1,530 @@
+ %
+% beamerthemeAI2.sty - VERSION 1.1 / Jun 23, 2018
+%
+% Created by Sergio Novaes on May 01, 2018.
+%
+% This theme is inspired by the Stanford theme packaged (beamerthemeStanford.sty) with the Beamer LaTeX package. 
+% created by Zhiming Wang on August 26, 2014, which in turn was inspired by the CambridgeUS theme packaged
+%
+% This work is dedicated by the author to the public domain.
+% 
+% The latest version of this template can be found at https://www.sprace.org.br/twiki/bin/view/Main/Template
+%
+%#####################################
+%		COLOR DEFINITIONS
+%#####################################
+% AI2 COLORS
+\definecolor{rai2}{HTML}{BF112E}			%  Red AI2
+\definecolor{bai2}{HTML}{02173E}			%  Blue AI2
+\definecolor{gai2}{HTML}{13A399}			%  Green AI2
+\definecolor{yai2}{HTML}{F5941C}			%  Yellow AI2
+\definecolor{oai2}{HTML}{F16541}			%  Orange AI2
+% Exclusive
+\definecolor{beg}{HTML}{DDCBA4}
+\definecolor{beglig}{HTML}{F7F2E5}	
+% SEE https://identity.stanford.edu/color.html
+\definecolor{spr}{HTML}{8C1515}   			% Cardinal Red
+\definecolor{darkred}{HTML}{820000}		% Dark Red 
+\definecolor{brightred}{HTML}{B1040E}		% Shine Red 
+%
+\definecolor{bluehover}{HTML}{00548F} 		% Dark Blue = hover color on light backgrounds
+\definecolor{lagunita}{HTML}{007C92} 		% Lagunita = Blue
+\definecolor{sky}{HTML}{0098DB}			% Sky = Shine Blue
+\definecolor{bluelink}{HTML}{006CB8} 		% Bright Blue = link color on light backgrounds
+%
+\definecolor{teal}{HTML}{00505C}			% Teal = Dark Green
+\definecolor{paloalto}{HTML}{175E54}  		% Palo Alto = Green
+\definecolor{mint}{HTML}{009B76} 			% Mint = Shine Green
+%
+\definecolor{gold}{HTML}{B26F16} 			% Gold = Dark Yellow
+\definecolor{sun}{HTML}{EAAB00} 			% Sun = Yellow
+\definecolor{poppy}{HTML}{E98300} 			% Poppy = Shine Yellow
+%
+\definecolor{beige}{HTML}{9D9573}  		% Beige = Dark Beige
+\definecolor{sandstone}{HTML}{D2C295} 		% Sandstone =  Beige
+\definecolor{lightbeige}{HTML}{F9F6EF} 		% Light Beige = Shine Beige 
+%
+\definecolor{chocolate}{HTML}{2F2424} 		% Chocolate = Dark Brown
+\definecolor{brown}{HTML}{8D3D1E} 		% Brown = Brown
+\definecolor{redwood}{HTML}{8D3D1E} 		% Redwood = Shine Brown
+%
+\definecolor{stone}{HTML}{928B81}			% Stone = Dark Grey
+\definecolor{driftwood}{HTML}{B6B1A9}		% Driftwood =  Light Grey
+\definecolor{cloud}{HTML}{DAD7CB}			% Cloud = Shine Grey
+%
+\definecolor{purple}{HTML}{93284F}			% Purple
+\definecolor{clay}{HTML}{5F574F}			% Clay = Very Dark Grey
+\definecolor{coolgrey}{HTML}{4D4F53}		% Cool Grey = Very Dark Grey
+\definecolor{fog}{HTML}{F4F4F4}			% Fog ~ White
+\definecolor{mygray}{gray}{0.9}				% Light gray
+
+%\definecolor{westar}{HTML}{DAD7CB}
+
+% BASE :: courtesy of beamerthemeCambridgeUS.sty
+\mode<presentation>
+\useoutertheme{infolines}
+\useinnertheme[shadow=false]{rounded}
+\setbeamerfont{block title}{size={}}
+% custom colors
+\usecolortheme{beaver}
+% HEADER
+\setbeamercolor{frametitle}{fg=white,bg=rai2} % sandstone
+\setbeamercolor{local structure}{fg=black}
+%\setbeamercolor{palette primary}{fg=spr,bg=sandstone} %ORG
+% FOOTER
+\setbeamercolor{palette primary}{fg=white,bg=bai2}  
+\setbeamercolor{palette secondary}{fg=white,bg=bai2} 
+\setbeamercolor{palette tertiary}{fg=white,bg=bai2}
+\setbeamercolor{titlelike}{fg=white,bg=bai2}
+% kill certain unprofessional elements
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{bibliography item}{}
+\setbeamertemplate{section in toc}%
+{\inserttocsectionnumber.~\inserttocsection}
+\setbeamertemplate{subsection in toc}%
+{\hspace{1em}$\bullet$~\inserttocsubsection\par}
+\setbeamertemplate{itemize items}{$\bullet$}
+
+
+% BASE :: courtesy of beamerthemeCambridgeUS.sty
+% \mode<presentation>
+% \useoutertheme{infolines}
+% \useinnertheme[shadow=false]{rounded}
+% \setbeamerfont{block title}{size={}}
+% % custom colors
+% \usecolortheme{beaver}
+% % HEADER
+% \setbeamercolor{frametitle}{fg=spr,bg=beg} % sandstone
+% \setbeamercolor{local structure}{fg=black}
+%\setbeamercolor{palette primary}{fg=spr,bg=sandstone} %ORG
+% FOOTER
+% \setbeamercolor{palette primary}{fg=white,bg=spr}  
+% \setbeamercolor{palette secondary}{fg=white,bg=spr} 
+% \setbeamercolor{palette tertiary}{fg=white,bg=spr}
+% \setbeamercolor{titlelike}{fg=white,bg=spr}
+% kill certain unprofessional elements
+% \setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{bibliography item}{}
+% \setbeamertemplate{section in toc}%
+% {\inserttocsectionnumber.~\inserttocsection}
+% % \setbeamertemplate{subsection in toc}%
+% {\hspace{1em}$\bullet$~\inserttocsubsection\par}
+% \setbeamertemplate{itemize items}{$\bullet$}
+
+% plain and definition theorem styles in sandstone
+\makeatletter
+\def\th@plain{
+  \normalfont
+  \setbeamercolor{block title example}{bg=sandstone,fg=white}
+  \setbeamercolor{block body example}{bg=sandstone!20,fg=black}
+  \def\inserttheoremblockenv{exampleblock}
+}
+\theoremstyle{plain}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{proposition}{Proposition}
+
+\def\th@definition{
+  \normalfont
+  \setbeamercolor{block title example}{bg=sandstone,fg=white}
+  \setbeamercolor{block body example}{bg=sandstone!20,fg=black}
+  \def\inserttheoremblockenv{exampleblock}
+}
+\theoremstyle{definition}
+
+% highlight theorem style in spr
+\makeatletter
+\def\th@highlight{
+  \normalfont
+  \setbeamercolor{block title example}{bg=spr,fg=white}
+  \setbeamercolor{block body example}{bg=spr!20,fg=black}
+  \def\inserttheoremblockenv{exampleblock}
+}
+\makeatother
+\theoremstyle{highlight}
+\newtheorem{hconjecture}{Conjecture}
+\newtheorem{hcorollary}{Corollary}
+\newtheorem{htheorem}{Theorem}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+
+%%% SPRACE DEFINITIONS
+% HEADLINE REMOVED
+\setbeamertemplate{headline}{}
+% FROM https://tex.stackexchange.com/questions/210525/beamer-page-number-without-total-number-of-pages
+% SEE ALSO https://tex.stackexchange.com/questions/170394/modify-beamer-footer-portions
+% FOOTLINE CUSTOMIZES
+\setbeamertemplate{footline}
+    {\begin{beamercolorbox}[ht=3.5ex,dp=2ex,sep=0ex]{author in head/foot}
+ \rlap{ ~~~~ \textbf{\insertdate}}  \hfill  {{\textbf{\insertauthor}} {\textbf{\insertshorttitle}}} \hfill \llap{{\textbf{\insertframenumber}} ~~~~ }%
+    \end{beamercolorbox}%
+}%
+
+\usefonttheme{professionalfonts}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{arrows,shapes}
+
+% PROJECT STATUS
+% \planned 	% red
+% \started  	% yellow
+% \underway  	% blue
+% \done     	% green
+%
+\newcommand{\planned}[1]{\fcolorbox{darkred}{brightred!10}{\sc{\color{darkred}{planned}}}}%
+\newcommand{\started}[1]{\fcolorbox{gold}{poppy!10}{\sc{\color{gold}{started}}}}%
+\newcommand{\underway}[1]{\fcolorbox{bluehover}{bluelink!10}{\sc{\color{bluehover}{underway}}}}%
+\newcommand{\done}[1]{\fcolorbox{paloalto}{mint!10}{\sc{\color{paloalto}{done}}}}%
+%
+%\newcommand{\planned}[1]{{\colorbox{brightred!10}{\sc{\color{darkred}{started}}}}}%
+%\newcommand{\started}[1]{{\colorbox{poppy!10}{\sc{\color{gold}{started}}}}}%
+%\newcommand{\underway}[1]{{\colorbox{bluelink!10}{\sc{\color{bluehover}{underway}}}}}%
+%\newcommand{\done}[1]{{\colorbox{mint!10}{\sc{\color{paloalto}{underway}}}}}%
+
+% LINE DEFINITION
+\newcommand{\sprlin}{\color{rai2}\rule{\linewidth}{0.4mm}}
+
+% ITEMIZATION
+% https://stackoverflow.com/questions/2865581/changing-the-colour-of-textbullet-in-latex-beamer
+% SEE https://www.sharelatex.com/learn/Lists
+% Change the color of all bullets
+% \setbeamercolor{itemize item}{fg=spr}
+%\useinnertheme{circles}
+%\newenvironment{trienv}{\only{\setbeamertemplate{items}[triangle]}}{}
+%\newenvironment{squareenv}{\only{\setbeamertemplate{items}[square]}}{}
+% USAGE ::
+% \begin{itemize}
+%      \item<tri@1-> A triangle item
+%      \item<square@1-> A square item
+%      \item A circle  item
+%    \end{itemize}
+
+% BULLET DEFINITIONS
+\newcommand{\sprbox}{{\fcolorbox{rai2}{white}{}}}
+\newcommand{\sprbul}{\color{rai2}\scalebox{1}{\textbullet}}
+\newcommand{\sprcir}{\color{rai2}\scalebox{1.3}{$\circ$}}
+\newcommand{\IteOne}[1]{\item[$\raisebox{+3.5pt}{{\sprbox}}$] {\normalsize #1}}
+\newcommand{\IteTwo}[1]{\item[$\raisebox{+1pt} \sprbul$] {\small #1}}
+\newcommand{\IteThr}[1]{\item[\sprcir] {\small #1}}
+
+% Vitor: 
+% http://timmurphy.org/2010/07/05/changing-itemize-bullet-styles-in-latex/
+% https://tex.stackexchange.com/questions/10715/custom-font-size-for-itemize?rq=1
+%\renewcommand{\labelitemi}{$\raisebox{+3.5pt}{{\sprbox}}$}
+%\renewcommand{\labelitemii}{$\raisebox{+1pt} \sprbul$}
+%\renewcommand{\labelitemiii}{\sprcir}
+
+% USAGE ::
+%  \begin{itemize}
+%        \IteOne{First Level}
+%     \begin{itemize}
+%         \IteTwo {Second Level}
+%        \begin{itemize}
+%         \IteThr{Third Level}
+%         \end{itemize}
+%      \end{itemize}
+%   \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BULLETS - EASYLIST : SEE https://en.wikibooks.org/wiki/LaTeX/List_Structures
+% To use easylist with Beamer, each frame that uses easylist must be marked as fragile
+% \usepackage[ampersand]{easylist}
+% \newcommand{\sprbox}{{\fcolorbox{rai2}{white}{}}}
+% \newcommand{\sprbul}{\color{rai2}\scalebox{1}{\textbullet}}
+% \newcommand{\sprcir}{\color{rai2}\scalebox{1.3}{$\circ$}}
+% \ListProperties(Hide=100, Hang=true, Progressive=3ex, Style1*= $\raisebox{+3.5pt}{{\sprbox}} \;\;  $, Style2*=$\raisebox{+1pt} \sprbul \;\, $, Style3*=$\sprcir \, $ ) %
+% \newcommand{\bli}{\begin{easylist}}
+% \newcommand{\eli}{\end{easylist}}
+%%% USAGE :: EASYLIST
+%   \bli
+%   & Blah
+%   && Blah
+%   &&& Blah
+%   \eli
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% ENVIROMENT FOR DIFFERENT SLIDE TYPES
+% SEE: https://bloerg.net/2012/06/21/customizing-the-frametitle-of-beamer-presentation.html
+
+%%% SLIDE TITLE
+\newenvironment{SliTit}[3]{  
+\begin{frame}[plain]
+{}
+
+\img{4.8}{2.5}{0.4}{AI2Logo.png}
+
+\vspace{3cm} \hspace{1.2cm}
+\textcolor{bai2}{\Huge #1}
+
+\sprlin
+
+\vspace{0.2cm} \hspace{1.2cm}
+\textcolor{rai2}{\Large #2}
+
+\hspace{1.2cm}
+\textcolor{rai2}{ #3}
+
+\end{frame}
+}%
+
+%%% SLIDE TITLE
+%\newenvironment{SliTit}[3]{  
+%\begin{frame}[plain]
+%{}
+% \img{4.8}{2.5}{0.4}{AI2Logo.png}
+
+%{}
+%\vspace{1.2cm}\hspace{1cm}
+%\textcolor{bai2}
+%{\Huge #1}
+
+%\sprlin
+
+%\vspace{0.2cm} \hspace{1.2cm}
+%\textcolor{rai2}{\Large #2}
+
+%\vspace{0.1cm} \hspace{1.2cm}
+%\textcolor{rai2}{ #3}
+
+%\end{frame}
+%}%
+
+%%% SLIDE SUB-TITLE
+\newenvironment{SliSubTit}[2]{  
+\begin{frame}[plain]
+{}
+
+ \img{5.2}{2.5}{0.4}{AI2Logomark.png} 
+
+\vspace{1.2cm}\hspace{1cm}
+{\huge #1}
+
+\sprlin
+
+\vspace{0.2cm} \hspace{1.05cm}
+\textcolor{rai2}{\Large #2}
+
+\end{frame}
+}%
+
+%%% SLIDE NORMAL WITH TITLE
+\newenvironment{SliT}[2]{  
+\begin{frame}
+\frametitle{\bf \hspace{0.1cm} #1}
+{#2}
+\end{frame}
+}%
+ 
+ 
+%%% SLIDE NORMAL NO TITLE 
+% 0 = meaning formulas may never be broken and 4 =(the default), meaning that formulas can be broken anywhere without any penalty.
+% If a frame needs to be broken into several pages, the material on all but the last page fills only 95% of each page by default.
+\newenvironment{Sli}[1]{  
+\begin{frame}[allowdisplaybreaks=0,allowframebreaks=0.95]
+{}
+ #1
+\end{frame}
+}%
+
+%%% SLIDE DOUBLE COLUMNS WITH TITLE
+\newenvironment{SliDT}[3]{  
+ \begin{frame} 
+\frametitle{\bf \hspace{0.1cm} #1}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   #2
+\end{column}
+\begin{column}{0.5\textwidth}   
+    #3
+\end{column}
+\end{columns}
+\end{frame}
+}%
+
+%%% SLIDE DOUBLE COLUMNS NO TITLE
+\newenvironment{SliD}[2]{  
+ \begin{frame}[allowdisplaybreaks=0,allowframebreaks=0.95]
+{}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   #1
+\end{column}
+\begin{column}{0.5\textwidth}   
+    #2
+\end{column}
+\end{columns}
+\end{frame}
+}%
+
+%%% SLIDE ADVANCED WITH TITLE
+\newenvironment{SliAdvT}[2]{  
+{\setbeamercolor{background canvas}{bg=beglig}
+\begin{frame} 
+\frametitle{\bf \hspace{0.1cm} #1}
+#2
+\end{frame}
+}}%
+
+%%% SLIDE ADVANCED NO TITLE
+\newenvironment{SliAdv}[1]{  
+{\setbeamercolor{background canvas}{bg=beglig}
+\begin{frame}[allowdisplaybreaks=0,allowframebreaks=0.95]
+{}
+#1
+\end{frame}
+}}%
+
+%%%  >>>>. SLIDE ADVANCED DOUBLE COLUMNS WITH TITLE
+\newenvironment{SliAdvDT}[3]{
+{\setbeamercolor{background canvas}{bg=beglig}
+\begin{frame} 
+\frametitle{\bf \hspace{0.1cm} #1}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   #2
+\end{column}
+\begin{column}{0.5\textwidth}   
+    #3
+\end{column}
+\end{columns}
+\end{frame}
+}}%
+
+%%% SLIDE ADVANCED DOUBLE COLUMNS NO TITLE
+\newenvironment{SliAdvD}[2]{  
+{\setbeamercolor{background canvas}{bg=beglig}
+\begin{frame}[allowdisplaybreaks=0,allowframebreaks=0.95]
+{}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   #1
+\end{column}
+\begin{column}{0.5\textwidth}   
+    #2
+\end{column}
+\end{columns}
+\end{frame}
+}}%
+
+%%% SLIDE EXERCICIO
+\newenvironment{Exe}[2]{  
+\begin{center}
+\begin{minipage}[h]{0.95\linewidth} 
+\begin{tcolorbox}[colback=sandstone,colframe=sandstone,title={\textcolor{rai2}{\Large Exercício #1}} ]
+{#2}   
+\end{tcolorbox} 
+\end{minipage}  
+\end{center}
+}%
+
+%%% SECTIONING
+\newcommand{\secx}[1]{{\color{bluehover}\Large\textbf{#1}}}
+\newcommand{\secxx}[1]{{\color{paloalto}\large\textbf{#1}}}
+
+%%% SPACE BETWEEN PARAGRAPHS
+\setlength{\parskip}{0.2cm}
+
+%%% REFERENCIA
+% https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+% USAGE :: \refer{<doi number>}
+\newenvironment{refer}[1]{  
+\begin{flushright}
+%\hyperlink{#2}{\bf\tiny DOI: #1}
+\href{https://doi.org/#1}{\textcolor{bluelink}{\bf\tiny DOI: #1}}
+\end{flushright}
+}%
+%\newenvironment{refer}[2]{  
+%\begin{flushright}
+%\hyperlink{#2}{\bf\tiny DOI: #1}
+%\href{#2}{\bf\tiny DOI: #1}
+%\end{flushright}
+
+%%% BOLD
+\newcommand{\bfs}[1]{{\color{rai2}\bf #1}}
+
+%%% FRAME EQUATION
+% https://tex.stackexchange.com/questions/122945/coloured-shadowed-boxes-around-equations
+% https://tex.stackexchange.com/questions/287438/tcolorbox-without-background-color-transparent
+% https://tex.stackexchange.com/questions/122945/coloured-shadowed-boxes-around-equations
+% https://tex.stackexchange.com/questions/287438/tcolorbox-without-background-color-transparent
+\usepackage[skins,theorems]{tcolorbox}
+% SPR :: \fra
+\newcommand{\fra}[1]{\tcbset{highlight math style={standard jigsaw, opacityback=0, colframe=spr, arc=0pt, boxrule=1.5pt}}  \tcbhighmath{#1}}
+% YEL :: \fray
+\newcommand{\fray}[1]{\tcbset{highlight math style={standard jigsaw, opacityback=0, colframe=sun!40, arc=0pt, boxrule=1.5pt}}  \tcbhighmath{#1}}
+% RED :: \frar
+\newcommand{\frar}[1]{\tcbset{highlight math style={standard jigsaw, opacityback=0, colframe=spr!40, arc=0pt, boxrule=1.5pt}}  \tcbhighmath{#1}}
+% GRE :: \frag
+\newcommand{\frag}[1]{\tcbset{highlight math style={standard jigsaw, opacityback=0, colframe=mint!40, arc=0pt, boxrule=1.5pt}}  \tcbhighmath{#1}}
+% BLU :: \frab
+\newcommand{\frab}[1]{\tcbset{highlight math style={standard jigsaw, opacityback=0, colframe=sky!40, arc=0pt, boxrule=1.5pt}}  \tcbhighmath{#1}}
+
+%
+% BLACK :: \frablack
+\newcommand{\frablack}[1]{\tcbset{highlight math style={standard jigsaw, opacityback=0, colframe=coolgrey, arc=0pt, boxrule=1.5pt}}  \tcbhighmath{#1}}
+%
+% COLORS % http://latexcolor.com
+\usepackage{xcolor}  % \color{colorname}
+\newcommand{\yel}[1]{\mathchoice%
+  {\colorbox{sun!20}{$\displaystyle #1$}}%
+  {\colorbox{sun!20}{$\textstyle #1$}}%
+  {\colorbox{sun!20}{$\scriptstyle #1$}}%
+  {\colorbox{sun!20}{$\scriptscriptstyle #1$}}
+  }%
+\newcommand{\red}[1]{\mathchoice% 
+  {\colorbox{spr!20}{$\displaystyle #1$}}%
+  {\colorbox{spr!20}{$\textstyle #1$}}%
+  {\colorbox{spr!20}{$\scriptstyle #1$}}%
+  {\colorbox{spr!20}{$\scriptscriptstyle #1$}}
+  }%
+\newcommand{\gre}[1]{\mathchoice%
+  {\colorbox{mint!20}{$\displaystyle #1$}}%
+  {\colorbox{mint!20}{$\textstyle #1$}}%
+  {\colorbox{mint!20}{$\scriptstyle #1$}}%
+  {\colorbox{mint!20}{$\scriptscriptstyle #1$}}
+  }%
+  \newcommand{\blu}[1]{\mathchoice%
+  {\colorbox{sky!20}{$\displaystyle #1$}}%
+  {\colorbox{sky!20}{$\textstyle #1$}}%
+  {\colorbox{sky!20}{$\scriptstyle #1$}}%
+  {\colorbox{sky!20}{$\scriptscriptstyle #1$}}
+  }%
+
+% For every picture that defines or uses external nodes, you'll have to apply the 'remember picture' style. 
+% To avoid some typing, we'll apply  the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+% By default all math in TikZ nodes are set in inline mode. 
+% Change this to displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+%%% INCLUDE IMAGE :: \img{X}{Y}{scale}{Figure.png}
+
+\newenvironment{img}[4]{  
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)+(#1,#2)$) { \includegraphics[scale=#3]{#4} };
+}%
+
+% FOR FORMULAS 
+\usepackage{slashed} 
+\renewcommand{\sl}{\slashed}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\usepackage[thicklines]{cancel} % \cancel{expression}
+\renewcommand\CancelColor{\color{rai2}}
+% EQUATION
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}[1]{\label{#1} \end{equation}}
+% EQUATION ARRAY
+\newcommand{\beqar}{\begin{eqnarray}}
+\newcommand{\eeqar}[1]{\label{#1} \end{eqnarray}}
+% EQUATION ARRAY WITHOUT NUMBER
+\newcommand{\be}{\begin{eqnarray*}}
+\newcommand{\ee}{\end{eqnarray*}}
+% ARRAY
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+% TABULAR
+\newcommand{\bt}{\begin{tabular}{ll}}
+\newcommand{\et}{\end{tabular}}
+
